@@ -34,7 +34,6 @@ module Slideable
   private
 
   def move_dirs
-    # subclass implements this
     raise NotImplementedError
   end
 
@@ -50,10 +49,8 @@ module Slideable
       if board.empty?(pos)
         moves << pos
       else
-        # can take an opponent's piece
         moves << pos if board[pos].color != color
 
-        # can't move past blocking piece
         break
       end
     end

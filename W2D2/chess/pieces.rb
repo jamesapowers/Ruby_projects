@@ -1,6 +1,6 @@
 require 'singleton'
 require_relative 'piece'
-# require_relative 'slideable'
+require_relative 'slideable'
 
 class NullPiece < Piece
   attr_reader :symbol
@@ -24,7 +24,7 @@ class Pawn < Piece
 end
 
 class Queen < Piece
-  # include Slideable
+  include Slideable
 
   def symbol
     '♛'.colorize(color)
@@ -38,7 +38,7 @@ class Queen < Piece
 end
 
 class Rook < Piece
-  # include Slideable
+  include Slideable
 
   def symbol
     '♜'.colorize(color)
@@ -53,7 +53,7 @@ end
 
 
 class Bishop < Piece
-# include Slideable
+  include Slideable
   def symbol
     '♝'.colorize(color)
   end
@@ -67,7 +67,7 @@ class Bishop < Piece
 end
 
 class Knight < Piece
-  # include Stepable
+  include Stepable
 
   def symbol
     '♞'.colorize(color)
@@ -88,7 +88,7 @@ class Knight < Piece
 end
 
 class King < Piece
-  # include Stepable
+  include Stepable
   def symbol
     '♚'.colorize(color)
   end
