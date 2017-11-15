@@ -2,7 +2,6 @@ class Board
 
   def initialize
     @grid = Array.new(9) { Array.new(9) }
-    # @setup = setup
   end
 
   def setup
@@ -30,10 +29,6 @@ class Board
     row, col = pos
     grid[row][col] = value
   end
-
-  # def position
-  #
-  # end
 
   def render
     header = "  0  1  2  3  4  5  6  7  8  9"
